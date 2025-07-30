@@ -3,9 +3,8 @@
 ## Wavelet-Informed Sampling for Encoding  
 **Learning from the Right Patches for Histopathology Representation Learning**
 
-[[`Paper`](https://doi.org/xx.xxxx/wise-mae)] [[`BibTeX`](#citation)]  
+[[`Paper`](https://doi.org/xx.xxxx/wise-mae)] 
 
-Firas Frikha*, et al. (*Equal contribution)
 
 <p align="center">
   <img src="./images/banner_placeholder.png" width="800"/>
@@ -13,10 +12,7 @@ Firas Frikha*, et al. (*Equal contribution)
 
 ---
 
-## 📢 News
 
-### July 2025
-- 🎉 **WISE-MAE Accepted**: Our WISE-MAE paper has been accepted for publication at AAAI 2025!
 
 ---
 
