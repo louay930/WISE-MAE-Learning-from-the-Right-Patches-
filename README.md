@@ -114,23 +114,9 @@ wise-mae/
 
 ---
 
-## 📚 Citation
-
-If you find WISE-MAE useful in your research, please cite:
-
-```bibtex
-@inproceedings{frikha2025waveletmae,
-  title     = {Learning from the Right Patches: A Two-Stage Wavelet-Driven Masked Autoencoder for Histopathology},
-  author    = {Frikha, Firas and Others},
-  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
-  year      = {2025}
-}
-```
 
 ---
 
 ## 📬 Contact
 
-For questions, issues, or collaboration proposals, please contact:  
-📧 firas.frikha[at]example.com  
-Or open an issue on GitHub.
+For questions, issues, or collaboration proposals, please open an issue on GitHub.
