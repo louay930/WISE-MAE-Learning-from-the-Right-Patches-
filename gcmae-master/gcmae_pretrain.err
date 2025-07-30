@@ -1,0 +1,47 @@
+[W330 17:21:20.237328255 Utils.hpp:164] Warning: Environment variable NCCL_BLOCKING_WAIT is deprecated; use TORCH_NCCL_BLOCKING_WAIT instead (function operator())
+[rank0]:[W330 17:21:20.563228830 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/vast-kisski/home/louay.hamdi/u13592/gcmae-master/main_pretrain.py", line 281, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/mnt/vast-kisski/home/louay.hamdi/u13592/gcmae-master/main_pretrain.py", line 163, in main
+[rank0]:     dataset_train = ImageFolderInstance(args.data_path, transform=transform_data)
+[rank0]:   File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 328, in __init__
+[rank0]:     super().__init__(
+[rank0]:   File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 149, in __init__
+[rank0]:     classes, class_to_idx = self.find_classes(self.root)
+[rank0]:   File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 234, in find_classes
+[rank0]:     return find_classes(directory)
+[rank0]:   File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 43, in find_classes
+[rank0]:     raise FileNotFoundError(f"Couldn't find any class folder in {directory}.")
+[rank0]: FileNotFoundError: Couldn't find any class folder in /user/louay.hamdi/u13592/.project/dir.project/NSCLC_pretrain_wavelet/all_images.
+[rank0]:[W330 17:21:26.567492934 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+E0330 17:21:28.525000 3242536 /mnt/vast-kisski/home/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3242538) of binary: /user/louay.hamdi/u13592/ls/envs/pytorch_env/bin/python
+Traceback (most recent call last):
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/user/louay.hamdi/u13592/ls/envs/pytorch_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+main_pretrain.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-30_17:21:28
+  host      : ggpu238.usr.hpc.gwdg.de
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3242538)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
