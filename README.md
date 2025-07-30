@@ -6,7 +6,7 @@
 [[`Paper`](https://doi.org/xx.xxxx/wise-mae)]
 
 <p align="center">
-  <img src="./intro_image.pdf" width="800" alt="Introductory Image"/>
+  <img src="./Intro_image_page-0001.jpg" width="800" alt="Introductory Image"/>
 </p>
 
 ---
@@ -76,7 +76,7 @@ Patch extraction uses 224×224 crops at 40× magnification. Coordinates are filt
 ## 🧬 Method Overview
 
 <p align="center">
-  <img src="./framework.pdf" width="800" alt="Framework Overview"/>
+  <img src="./framework_page-0001.jpg" width="800" alt="Framework Overview"/>
 </p>
 
 ### Wavelet-Based Patch Selection  
